@@ -3,108 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul Rehman Marfani</title>
+  <title>My Portfolio</title>
   <link rel="icon" href="Me.jpg" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- Hamburger Menu -->
-  <div class="hamburger-menu" onclick="toggleMenu()">
-    &#9776;
-  </div>
-
-  <!-- Side Navigation Panel -->
-  <nav id="side-nav" class="side-nav">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- About Section -->
-  <section id="about" class="section">
+  <section id="about" class="about-section">
     <div class="container">
       <div class="profile">
-        <img src="Me.jpg" alt="Profile Picture" class="profile-img">
-        <h1>Hi, I'm Abdul Rehman Marfani</h1>
-        <p>I am a passionate programmer from Karachi, Pakistan. Currently pursuing A Levels, I have certifications from Google, IBM, and Cisco that help shape my programming skills. Welcome to my portfolio!</p>
+        <img src="Me.jpg" alt="Profile Picture" class="profile-pic">
+        <h2>Hello, I'm Abdul Rehman</h2>
+        <p>I'm passionate about programming and technology. I've completed my O and A levels and I'm constantly improving my skills. I have certifications from Google, IBM, and Cisco, and I'm eager to grow in the tech world. Welcome to my portfolio!</p>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section">
+  <section id="projects" class="projects-section">
     <h2>Projects</h2>
-    <div class="projects-container">
+    <div class="projects-grid">
       <div class="project-card">
         <h3>Snake Game</h3>
-        <p>A classic game built with Python and the Turtle library.</p>
+        <p>A Python-based game where the player controls a snake that grows as it eats food.</p>
       </div>
       <div class="project-card">
         <h3>Pong Game</h3>
-        <p>Recreated the iconic Pong game using Python and the Turtle module.</p>
+        <p>The classic Pong game made with Python using the Turtle library.</p>
       </div>
       <div class="project-card">
         <h3>Turtle Crossing Game</h3>
-        <p>A fun game where you control a turtle, trying to cross the road without getting hit.</p>
+        <p>An arcade-style game where the player avoids obstacles to cross the road.</p>
       </div>
       <div class="project-card">
         <h3>US States Guessing Game</h3>
-        <p>A Python-based game that challenges users to guess US states.</p>
+        <p>Guess US states using a Python-based game, featuring real data for accuracy.</p>
       </div>
       <div class="project-card">
-        <h3>Pomodoro GUI Application</h3>
-        <p>A productivity timer built using Python and Tkinter.</p>
+        <h3>Pomodoro GUI App</h3>
+        <p>A productivity timer app built using Python's Tkinter library to boost time management.</p>
       </div>
     </div>
   </section>
 
   <!-- Certifications Section -->
-  <section id="certifications" class="section">
+  <section id="certifications" class="certifications-section">
     <h2>Certifications</h2>
-    <div class="cert-container">
+    <div class="certifications-grid">
       <div class="cert-card">
-        <img src="Google-certificate.jpg" alt="Google Certificate" class="cert-img">
+        <img src="Google-certificate.jpg" alt="Google Python Certification">
         <h3>Crash Course on Python</h3>
         <p>Issued by Google</p>
       </div>
       <div class="cert-card">
-        <img src="Cisco-certificate.jpg" alt="Cisco Certificate" class="cert-img">
+        <img src="Python_Essentials_1.png" alt="Cisco Python Essentials 1">
         <h3>Python Essentials 1</h3>
         <p>Issued by Cisco Networking Academy</p>
       </div>
       <div class="cert-card">
-        <img src="Cisco-certificate-2.jpg" alt="Cisco Certificate" class="cert-img">
+        <img src="Python_Essentials_2.png" alt="Cisco Python Essentials 2">
         <h3>Python Essentials 2</h3>
         <p>Issued by Cisco Networking Academy</p>
       </div>
       <div class="cert-card">
-        <img src="IBM-certificate.jpg" alt="IBM Certificate" class="cert-img">
-        <h3>Python for Data Science, AI, and Development</h3>
+        <img src="IBM-certificate.png" alt="IBM Python for Data Science">
+        <h3>Python for Data Science, AI and Development</h3>
         <p>Issued by IBM</p>
       </div>
       <div class="cert-card">
-        <img src="DataFlair-certificate.jpg" alt="DataFlair Certificate" class="cert-img">
+        <img src="Data-flair.jpg" alt="Data Flair Python Introduction">
         <h3>Introduction to Python</h3>
         <p>Issued by Data Flair</p>
+      </div>
+      <div class="cert-card">
+        <img src="kaggle-certificate.png" alt="Kaggle Python">
+        <h3>Python</h3>
+        <p>Issued by Kaggle</p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
+  <section id="contact" class="contact-section">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
+    <p>If you'd like to get in touch, feel free to reach out via email or LinkedIn:</p>
+    <p><strong>Email:</strong> <a href="mailto:abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abdul-rehman" target="_blank">My LinkedIn</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2024 Abdul Rehman Marfani. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
