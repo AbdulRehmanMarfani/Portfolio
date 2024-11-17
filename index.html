@@ -4,30 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link rel="icon" href="Me.jpg" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpg" href="Me.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>  
   </header>
 
   <!-- About Section -->
   <section id="about" class="about-section">
     <div class="container">
       <div class="profile">
-        <img src="Me.jpg" alt="Profile Picture" class="profile-pic">
-        <h2>Hello, I'm Abdul Rehman</h2>
-        <p>I'm passionate about programming and technology. I've completed my O and A levels and I'm constantly improving my skills. I have certifications from Google, IBM, and Cisco, and I'm eager to grow in the tech world. Welcome to my portfolio!</p>
+        <!-- Profile Picture Section -->
+        <img src="Me.jpg" class="profile-pic" alt="Profile Picture">
+        <h2>Greetings!</h2>
+        <p>I'm Abdul Rehman Marfani from Karachi, Pakistan. I've completed my O and am in the process of completing A levels and have a strong passion for programming. I've earned certifications from Google, IBM, and Cisco, which have helped me develop my skills and knowledge in the tech field. I'm always eager to learn and grow in this ever-evolving industry. Welcome to my portfolio!</p>
       </div>
     </div>
   </section>
@@ -38,23 +39,23 @@
     <div class="projects-grid">
       <div class="project-card">
         <h3>Snake Game</h3>
-        <p>A Python-based game where the player controls a snake that grows as it eats food.</p>
+        <p>A classic game built using Python and the Turtle library where the player controls a snake that grows as it eats food.</p>
       </div>
       <div class="project-card">
         <h3>Pong Game</h3>
-        <p>The classic Pong game made with Python using the Turtle library.</p>
+        <p>Recreated the iconic Pong game using Python and the Turtle module with smooth paddle and ball movement mechanics.</p>
       </div>
       <div class="project-card">
         <h3>Turtle Crossing Game</h3>
-        <p>An arcade-style game where the player avoids obstacles to cross the road.</p>
+        <p>A fun arcade-style game where a turtle avoids obstacles to cross the road. Built using Python's Turtle graphics module.</p>
       </div>
       <div class="project-card">
         <h3>US States Guessing Game</h3>
-        <p>Guess US states using a Python-based game, featuring real data for accuracy.</p>
+        <p>An educational game to guess US states, using Python and CSV data for accuracy.</p>
       </div>
       <div class="project-card">
-        <h3>Pomodoro GUI App</h3>
-        <p>A productivity timer app built using Python's Tkinter library to boost time management.</p>
+        <h3>Pomodoro GUI Application</h3>
+        <p>A productivity timer built with Python’s Tkinter library, implementing the Pomodoro technique for efficient time management.</p>
       </div>
     </div>
   </section>
@@ -64,32 +65,32 @@
     <h2>Certifications</h2>
     <div class="certifications-grid">
       <div class="cert-card">
-        <img src="Google-certificate.jpg" alt="Google Python Certification">
+        <img src="Google-certificate.jpg" alt="Crash Course on Python - Google">
         <h3>Crash Course on Python</h3>
         <p>Issued by Google</p>
       </div>
       <div class="cert-card">
-        <img src="Python_Essentials_1.png" alt="Cisco Python Essentials 1">
+        <img src="Python_Essentials_1.png" alt="Python Essentials 1 - Cisco">
         <h3>Python Essentials 1</h3>
         <p>Issued by Cisco Networking Academy</p>
       </div>
       <div class="cert-card">
-        <img src="Python_Essentials_2.png" alt="Cisco Python Essentials 2">
+        <img src="Python_Essentials_2.png" alt="Python Essentials 2 - Cisco">
         <h3>Python Essentials 2</h3>
         <p>Issued by Cisco Networking Academy</p>
       </div>
       <div class="cert-card">
-        <img src="IBM-certificate.png" alt="IBM Python for Data Science">
-        <h3>Python for Data Science, AI and Development</h3>
+        <img src="IBM-certificate.png" alt="Python for Data Science - IBM">
+        <h3>Python for Data Science, AI, and Development</h3>
         <p>Issued by IBM</p>
       </div>
       <div class="cert-card">
-        <img src="Data-flair.jpg" alt="Data Flair Python Introduction">
+        <img src="Data-flair.jpg" alt="Introduction to Python - Data Flair">
         <h3>Introduction to Python</h3>
         <p>Issued by Data Flair</p>
       </div>
       <div class="cert-card">
-        <img src="kaggle-certificate.png" alt="Kaggle Python">
+        <img src="kaggle-certificate.png" alt="Python - Kaggle">
         <h3>Python</h3>
         <p>Issued by Kaggle</p>
       </div>
@@ -97,16 +98,17 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact-section">
+  <section id="contact">
     <h2>Contact Me</h2>
-    <p>If you'd like to get in touch, feel free to reach out via email or LinkedIn:</p>
-    <p><strong>Email:</strong> <a href="mailto:abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abdul-rehman" target="_blank">My LinkedIn</a></p>
+    <p>If you'd like to get in touch, you can reach out via email:</p>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Abdul Rehman Marfani. All rights reserved.</p>
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
   </footer>
 </body>
 </html>
