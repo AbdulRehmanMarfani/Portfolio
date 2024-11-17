@@ -5,97 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdul Rehman Marfani</title>
   <link rel="icon" type="image/jpg" href="Me.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Abdul Rehman Marfani</h1>
-      <p>A programmer, problem-solver, and lifelong learner.</p>
-    </div>
-  </section>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- About Section -->
-  <section class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <img src="Me.jpg" alt="Abdul Rehman Marfani" class="profile-picture">
+  <section id="about" class="about">
+    <div class="about-container">
+      <img src="Me.jpg" alt="Profile Picture" class="profile-picture">
+      <h1>Abdul Rehman Marfani</h1>
       <p>
-        I’m a passionate programmer from Karachi, Pakistan, currently pursuing A Levels. 
-        With certifications from Google, IBM, and Cisco, I strive to push boundaries in technology.
+        Passionate programmer from Karachi, Pakistan, with a strong love for technology and innovation.  
+        With certifications from Google, IBM, Cisco, and Kaggle, I’m constantly exploring new ways to grow and solve problems in tech.  
       </p>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="projects">
-    <div class="container">
+  <section id="projects" class="projects">
+    <div class="section-header">
       <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Snake Game</h3>
-          <p>Classic game where the snake grows as it eats food. Developed using Python.</p>
-        </div>
-        <div class="card">
-          <h3>Pong Game</h3>
-          <p>A recreation of the iconic Pong game using Python's Turtle module.</p>
-        </div>
-        <div class="card">
-          <h3>Turtle Crossing Game</h3>
-          <p>An arcade game where a turtle dodges traffic to cross the road safely.</p>
-        </div>
-        <div class="card">
-          <h3>US States Guessing Game</h3>
-          <p>Educational Python game where users identify U.S. states on a map.</p>
-        </div>
-        <div class="card">
-          <h3>Pomodoro Timer</h3>
-          <p>A productivity timer using the Pomodoro technique for effective time management.</p>
-        </div>
+    </div>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Snake Game</h3>
+        <p>A classic game built using Python and the Turtle library where the player controls a growing snake.</p>
+      </div>
+      <div class="project-card">
+        <h3>Pong Game</h3>
+        <p>Recreated the iconic Pong game using Python with smooth paddle and ball mechanics.</p>
+      </div>
+      <div class="project-card">
+        <h3>Turtle Crossing Game</h3>
+        <p>An arcade-style game where a turtle avoids obstacles to cross the road.</p>
+      </div>
+      <div class="project-card">
+        <h3>US States Guessing Game</h3>
+        <p>A geography-based game using Python and CSV data for accuracy.</p>
+      </div>
+      <div class="project-card">
+        <h3>Pomodoro GUI Application</h3>
+        <p>A productivity timer implementing the Pomodoro technique for time management.</p>
       </div>
     </div>
   </section>
 
   <!-- Certifications Section -->
-  <section class="certifications">
-    <div class="container">
+  <section id="certifications" class="certifications">
+    <div class="section-header">
       <h2>Certifications</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Crash Course on Python</h3>
-          <p>Google</p>
-        </div>
-        <div class="card">
-          <h3>Python Essentials 1</h3>
-          <p>Cisco Networking Academy</p>
-        </div>
-        <div class="card">
-          <h3>Python Essentials 2</h3>
-          <p>Cisco Networking Academy</p>
-        </div>
-        <div class="card">
-          <h3>Python for Data Science</h3>
-          <p>IBM</p>
-        </div>
-        <div class="card">
-          <h3>Introduction to Python</h3>
-          <p>Data Flair</p>
-        </div>
-        <div class="card">
-          <h3>Python</h3>
-          <p>Kaggle</p>
-        </div>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <img src="Google-certificate.jpg" alt="Google Certificate">
+        <h3>Crash Course on Python</h3>
+        <p>Issued by Google</p>
+      </div>
+      <div class="cert-card">
+        <img src="Python_Essentials_1.png" alt="Cisco Certificate">
+        <h3>Python Essentials 1</h3>
+        <p>Issued by Cisco Networking Academy</p>
+      </div>
+      <div class="cert-card">
+        <img src="IBM-certificate.png" alt="IBM Certificate">
+        <h3>Python for Data Science</h3>
+        <p>Issued by IBM</p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Let’s work together! Feel free to reach out:</p>
-      <p>Email: <a href="mailto:abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2>Contact Me</h2>
+      <p><strong>Email:</strong> <a href="mailto:abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/abdulrehmanmarfani</a></p>
     </div>
   </section>
 
