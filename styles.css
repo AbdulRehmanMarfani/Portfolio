@@ -59,6 +59,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0 20px;
 }
 
 .hero h1 {
@@ -97,27 +98,45 @@ body {
   margin-bottom: 20px;
 }
 
-.project-grid, .certification-grid {
-  display: flex;
-  flex-wrap: wrap;
+/* Project and Certification Grids */
+.project-grid,
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  justify-content: center;
+  justify-items: center;
+  padding: 0 20px;
 }
 
-.project-card, .cert-card {
+.project-card,
+.cert-card {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
   text-align: center;
+  width: 100%;
+  max-width: 300px;
 }
 
-.project-card:hover, .cert-card:hover {
+.project-card h3,
+.cert-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.project-card p,
+.cert-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.project-card:hover,
+.cert-card:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact */
+/* Contact Section */
 .contact a {
   color: #007aff;
   text-decoration: none;
