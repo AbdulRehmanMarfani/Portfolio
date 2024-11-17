@@ -92,6 +92,7 @@ p {
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #444;  /* Greyish border */
 }
 
 .project-card:hover {
@@ -122,12 +123,27 @@ p {
   gap: 20px;
 }
 
+.cert-card {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #444;  /* Greyish border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
+}
+
 .cert-card img {
   width: 100%;
   height: 200px;
   object-fit: contain;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  border: 2px solid #444; /* Greyish border for image */
 }
 
 .cert-card img:hover {
