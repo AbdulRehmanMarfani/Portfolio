@@ -12,6 +12,18 @@ body {
   line-height: 1.6;
 }
 
+.profile-picture {
+  display: block; /* Center the image */
+  max-width: 150px; /* Set a maximum width */
+  max-height: 150px; /* Set a maximum height */
+  width: auto; /* Maintain the aspect ratio */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 50%; /* Make it circular */
+  margin: 0 auto; /* Center it horizontally */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a modern look */
+}
+
+
 h1, h2, h3 {
   font-weight: 600;
 }
