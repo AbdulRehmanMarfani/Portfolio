@@ -52,18 +52,24 @@ header {
 .profile {
   max-width: 600px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the profile picture */
 }
 
+/* Profile Picture */
 .profile-pic {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  object-fit: cover;  /* Ensures the image covers the circular frame without being stretched */
+  object-fit: cover;  /* Ensures the image covers the circular container */
+  object-position: center;  /* Keeps the center of the image in focus */
   border: 4px solid #00aaff;
   box-shadow: 0px 0px 15px rgba(0, 170, 255, 0.6);
   margin-bottom: 20px;
 }
 
+/* Name & About */
 .profile h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -74,6 +80,7 @@ header {
   color: #666;
   max-width: 700px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 
