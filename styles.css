@@ -33,9 +33,14 @@ section {
   left: -250px;
   width: 250px;
   height: 100%;
-  background-color: #fff;
+  background-color: #333;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
   transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-nav.open {
+  left: 0;
 }
 
 .side-nav ul {
@@ -52,7 +57,7 @@ section {
 
 .side-nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
   transition: color 0.3s;
@@ -75,26 +80,39 @@ section {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile h1 {
   font-size: 36px;
   color: #333;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .profile p {
   font-size: 18px;
   color: #555;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Projects Section */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
 .project-card {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
   transition: transform 0.3s ease;
 }
 
@@ -114,12 +132,17 @@ section {
 }
 
 /* Certifications Section */
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
 .cert-card {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -153,4 +176,3 @@ footer {
 #side-nav.open {
   left: 0;
 }
-
