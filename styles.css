@@ -32,8 +32,10 @@ header {
   padding: 10px 20px;
   box-shadow: 0 0 10px rgba(0, 204, 255, 0.7); /* Blue-ish glow effect */
   z-index: 1000; /* Keep navbar on top */
-  transition: top 0.3s ease; /* Smooth transition */
+  opacity: 0; /* Start fully transparent */
+  transition: top 0.3s ease, opacity 0.3s ease; /* Smooth slide and fade */
 }
+
 
 /* Navigation Links */
 .navbar ul {
