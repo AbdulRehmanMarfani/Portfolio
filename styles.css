@@ -24,15 +24,15 @@ header {
 
 /* Navigation Bar Styles */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);  /* Less transparent, dark background */
-    padding: 10px 20px;
-    box-shadow: 0 0 10px rgba(0, 204, 255, 0.7); /* Blue-ish glow effect */
-    z-index: 1000;  /* Keep navbar on top */
-    transition: box-shadow 0.3s ease;  /* Smooth transitions */
+  position: fixed;
+  top: -60px; /* Start hidden */
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Keep current style */
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.7); /* Blue-ish glow effect */
+  z-index: 1000; /* Keep navbar on top */
+  transition: top 0.3s ease; /* Smooth transition */
 }
 
 /* Navigation Links */
