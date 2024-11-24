@@ -116,3 +116,30 @@
   </footer>
 </body>
 </html>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector(".navbar");
+    const aboutSection = document.querySelector("#about");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            navbar.style.top = "0"; // Show the navbar when About section is not visible
+          } else {
+            navbar.style.top = "-60px"; // Hide the navbar
+          }
+        });
+      },
+      {
+        root: null, // Use the viewport as the root
+        threshold: 0.5, // Trigger when 50% of the About section is visible
+      }
+    );
+
+    observer.observe(aboutSection);
+  });
+</script>
+
