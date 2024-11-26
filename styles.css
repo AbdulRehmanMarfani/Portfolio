@@ -75,6 +75,10 @@ header {
 }
 
 /* Profile */
+.profile {
+  text-align: center;
+}
+
 .profile-pic {
   width: 200px;
   height: 200px;
