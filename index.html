@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>My Portfolio</title>
   <link rel="icon" type="image/png" href="Me.png">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
@@ -99,16 +98,15 @@
     </div>
   </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, you can reach out via email:</p>
-        <div class="contact-info">
-        <!-- Email Link -->
-        <p><strong>Email:</strong> <a href="abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
-        </div>
-    </section>
-  
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, you can reach out via email:</p>
+    <div class="contact-info">
+      <!-- Email Link -->
+      <p><strong>Email:</strong> <a href="mailto:abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -127,6 +125,12 @@
       image.addEventListener('click', function() {
         const modal = document.querySelector('.modal');
         const modalImg = document.getElementById('img01');
+        const navbar = document.querySelector('.navbar');
+        
+        // Hide the navbar when modal is opened
+        navbar.style.top = "-80px";
+        navbar.style.opacity = "0";
+        
         modal.style.display = "block";
         modalImg.src = this.src;
       });
@@ -134,7 +138,14 @@
 
     // Close modal
     document.querySelector('.close').addEventListener('click', function() {
-      document.querySelector('.modal').style.display = "none";
+      const modal = document.querySelector('.modal');
+      const navbar = document.querySelector('.navbar');
+      
+      // Show the navbar again when modal is closed
+      navbar.style.top = "0";
+      navbar.style.opacity = "1";
+      
+      modal.style.display = "none";
     });
 
     // Navbar visibility based on scroll
