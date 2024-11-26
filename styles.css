@@ -67,23 +67,34 @@ section {
   margin: 20px 0;
 }
 
-.about-section {
-  background: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  padding: 40px 0;
-}
 /* Profile Section */
-.profile {
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
-  margin-top: 20px;
+  padding: 2rem;
 }
 
+/* Profile Section (containing text and image) */
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Profile Picture */
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  object-fit: cover;  /* Ensures the image is not stretched or distorted */
-  margin-top: 20px;   /* Adds some space from the top */
+  object-fit: cover;  /* Ensures the image maintains aspect ratio without stretching */
+  object-position: center center;  /* Centers the image inside the circle */
+  margin-bottom: 1rem;
 }
 
 
