@@ -92,9 +92,11 @@ section {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  object-fit: cover;  /* Ensures the image maintains aspect ratio without stretching */
+  object-fit: cover;  /* Ensures the image maintains its aspect ratio */
+  object-position: center; /* Ensures the image is centered inside the circle */
   margin-bottom: 1rem;
 }
+
 
 
 .projects-section,
