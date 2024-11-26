@@ -67,7 +67,7 @@ section {
   margin: 20px 0;
 }
 
-/* Profile Section */
+/* About Section */
 .about-section {
   display: flex;
   justify-content: center;
@@ -77,7 +77,7 @@ section {
   padding: 2rem;
 }
 
-/* Profile Section (containing text and image) */
+/* Profile container */
 .profile {
   display: flex;
   flex-direction: column;
@@ -93,7 +93,6 @@ section {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;  /* Ensures the image maintains aspect ratio without stretching */
-  object-position: center center;  /* Centers the image inside the circle */
   margin-bottom: 1rem;
 }
 
