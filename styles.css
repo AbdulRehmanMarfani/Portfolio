@@ -1,11 +1,10 @@
-/* General Reset */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   background: linear-gradient(to bottom, #000000, #1f2a57);
   color: #d4e4ff;
@@ -13,27 +12,14 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
-header {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
 /* Navbar */
 .navbar {
-  position: fixed;
-  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.7);
+  padding: 1rem;
   z-index: 1000;
-  transition: all 0.5s ease-in-out;
-  top: -80px;
 }
 
 .navbar-container {
@@ -47,16 +33,15 @@ header {
   gap: 20px;
 }
 
-.navbar a {
-  text-decoration: none;
+.navbar-links a {
   color: white;
   font-size: 18px;
-  padding: 10px 15px;
-  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
   transition: color 0.3s ease;
 }
 
-.navbar a:hover {
+.navbar-links a:hover {
   color: #00ccff;
 }
 
@@ -85,57 +70,7 @@ header {
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  margin-bottom: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Projects Section */
-.projects-section {
-  padding: 3rem 2rem;
-  background: rgba(0, 31, 63, 0.9);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: rgba(0, 31, 63, 0.8);
-  border: 1px solid #00ccff;
-  padding: 1.5rem;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 204, 255, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 30px rgba(0, 204, 255, 0.7);
-}
-
-/* Certifications Section */
-.certifications-section {
-  padding: 3rem 2rem;
-}
-
-.certifications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem;
-}
-
-.cert-card img {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.cert-card img:hover {
-  transform: scale(1.05);
+  margin: 0 auto;
 }
 
 /* Modal */
@@ -168,18 +103,18 @@ header {
   z-index: 3000;
 }
 
-/* Mobile Styles */
+/* Mobile Navbar */
 @media screen and (max-width: 768px) {
   .navbar-links {
     display: none;
-    flex-direction: column;
-    gap: 10px;
     position: absolute;
     top: 60px;
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     padding: 20px 0;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .navbar-links.active {
