@@ -253,21 +253,23 @@ footer {
 
 /* Mobile view adjustments for the modal */
 @media screen and (max-width: 768px) {
+  /* Make sure the modal content is centered properly */
   .modal-content {
     display: block;
-    max-width: 90%;  /* Make the image a bit smaller on mobile */
-    margin: 5% auto;
+    max-width: 90%;  /* Adjust size of the image on mobile */
+    margin: 5% auto; /* Center the image in the modal */
   }
 
+  /* Center the modal close button */
   .close {
-    top: 10px; /* Adjust close button position for mobile */
+    top: 10px;  /* Position close button above the image */
     right: 10px;
-    font-size: 25px;
+    font-size: 25px;  /* Adjust size for mobile */
   }
-}
 
-  .navbar a {
-    font-size: 16px;
-    padding: 8px 12px;
+  /* Make the profile picture centered on mobile */
+  .profile-pic {
+    width: 150px; /* Adjust image size for mobile */
+    height: 150px;
   }
 }
