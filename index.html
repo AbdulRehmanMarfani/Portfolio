@@ -118,27 +118,56 @@
   </div>
 
   <!-- JavaScript Code -->
-  <script>
-    // Modal functionality for certificates
-    document.querySelectorAll('.cert-card img').forEach(image => {
-      image.addEventListener('click', function() {
-        const modal = document.querySelector('.modal');
-        const modalImg = document.getElementById('img01');
-        modal.style.display = "flex";  // Show modal using flex (center the image)
-        modalImg.src = this.src;
-        
-        // Hide navbar when modal is opened
-        const navbar = document.querySelector('.navbar');
-        navbar.style.top = "-80px";  // Hide navbar
-      });
-    });
-
-    // Close modal
-    document.querySelector('.close').addEventListener('click', function() {
-      document.querySelector('.modal').style.display = "none";  // Hide modal
+ <script>
+  // Modal functionality for certificates
+  document.querySelectorAll('.cert-card img').forEach(image => {
+    image.addEventListener('click', function() {
+      const modal = document.querySelector('.modal');
+      const modalImg = document.getElementById('img01');
       const navbar = document.querySelector('.navbar');
-      navbar.style.top = "0";  // Show navbar back
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      // Hide navbar when modal is opened
+      navbar.style.top = "-80px"; 
+      navbar.style.opacity = "0"; 
     });
-  </script>
+  });
+
+  // Close modal
+  document.querySelector('.close').addEventListener('click', function() {
+    const modal = document.querySelector('.modal');
+    const navbar = document.querySelector('.navbar');
+    modal.style.display = "none";
+    // Show navbar when modal is closed
+    navbar.style.top = "0";
+    navbar.style.opacity = "1";
+  });
+
+  // Navbar visibility based on scroll
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector(".navbar");
+    const aboutSection = document.querySelector("#about");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            navbar.style.top = "0"; // Slide navbar into view
+            navbar.style.opacity = "1"; // Fade-in effect
+          } else {
+            navbar.style.top = "-80px"; // Slide navbar out of view
+            navbar.style.opacity = "0"; // Fade-out effect
+          }
+        });
+      },
+      {
+        root: null, // Use the viewport as the root
+        threshold: 0.5, // Trigger when 50% of the About section is visible
+      }
+    );
+
+    observer.observe(aboutSection);
+  });
+</script>
 </body>
 </html>
