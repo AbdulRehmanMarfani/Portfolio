@@ -243,7 +243,7 @@ footer {
   .navbar li {
     margin: 10px 0;
   }
-/* Floating effect on project and cert cards */
+/* General floating effect for project and cert cards */
 .project-card:hover,
 .cert-card:hover {
   transform: translateY(-10px);  /* Slightly lift the card */
@@ -253,23 +253,26 @@ footer {
 
 /* Mobile view adjustments for the modal */
 @media screen and (max-width: 768px) {
-  /* Make sure the modal content is centered properly */
+  /* Center the modal content (certificate image) */
   .modal-content {
     display: block;
-    max-width: 90%;  /* Adjust size of the image on mobile */
-    margin: 5% auto; /* Center the image in the modal */
+    max-width: 80%;  /* Ensure the image size is optimal */
+    max-height: 80%;
+    margin: 5% auto;  /* Center horizontally and add margin at the top */
   }
 
   /* Center the modal close button */
   .close {
-    top: 10px;  /* Position close button above the image */
+    top: 10px;  /* Position the close button above the image */
     right: 10px;
-    font-size: 25px;  /* Adjust size for mobile */
+    font-size: 30px;  /* Adjust size for mobile */
+    color: white;
   }
 
-  /* Make the profile picture centered on mobile */
+  /* Profile picture resizing for mobile */
   .profile-pic {
-    width: 150px; /* Adjust image size for mobile */
+    width: 150px;  /* Adjust profile pic size */
     height: 150px;
+    margin-bottom: 1rem;
   }
 }
