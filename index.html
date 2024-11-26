@@ -120,56 +120,51 @@
   <!-- JavaScript Code -->
  <script>
   // Modal functionality for certificates
-  document.querySelectorAll('.cert-card img').forEach(image => {
-    image.addEventListener('click', function() {
-      const modal = document.querySelector('.modal');
-      const modalImg = document.getElementById('img01');
-      const navbar = document.querySelector('.navbar');
-      modal.style.display = "flex"; // Show the modal
-      modalImg.src = this.src;
-
-      // Hide navbar when modal is opened
-      navbar.style.top = "-80px"; 
-      navbar.style.opacity = "0"; 
-    });
-  });
-
-  // Close modal
-  document.querySelector('.close').addEventListener('click', function() {
+document.querySelectorAll('.cert-card img').forEach(image => {
+  image.addEventListener('click', function() {
     const modal = document.querySelector('.modal');
-    const navbar = document.querySelector('.navbar');
-    modal.style.display = "none"; // Hide the modal
-
-    // Show navbar when modal is closed
-    navbar.style.top = "0"; 
-    navbar.style.opacity = "1"; 
+    const modalImg = document.getElementById('img01');
+    
+    // Show the modal
+    modal.style.display = "block";
+    modalImg.src = this.src; // Set the source of the modal image to the clicked image
   });
+});
 
-  // Navbar visibility based on scroll
-  document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector(".navbar");
-    const aboutSection = document.querySelector("#about");
+// Close modal functionality
+document.querySelector('.close').addEventListener('click', function() {
+  const modal = document.querySelector('.modal');
+  
+  // Hide the modal when the close button is clicked
+  modal.style.display = "none";
+});
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            navbar.style.top = "0"; // Slide navbar into view
-            navbar.style.opacity = "1"; // Fade-in effect
-          } else {
-            navbar.style.top = "-80px"; // Slide navbar out of view
-            navbar.style.opacity = "0"; // Fade-out effect
-          }
-        });
-      },
-      {
-        root: null, // Use the viewport as the root
-        threshold: 0.5, // Trigger when 50% of the About section is visible
-      }
-    );
+// Navbar visibility based on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar");
+  const aboutSection = document.querySelector("#about");
 
-    observer.observe(aboutSection);
-  });
+  // Intersection Observer to track visibility of the About section
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          navbar.style.top = "0"; // Show navbar when About section is not visible
+          navbar.style.opacity = "1"; // Fade-in effect
+        } else {
+          navbar.style.top = "-80px"; // Hide navbar when About section is visible
+          navbar.style.opacity = "0"; // Fade-out effect
+        }
+      });
+    },
+    {
+      root: null, // Use the viewport as the root
+      threshold: 0.5, // Trigger when 50% of the About section is visible
+    }
+  );
+
+  observer.observe(aboutSection); // Observe the About section
+});
 </script>
 </body>
 </html>
