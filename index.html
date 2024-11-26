@@ -120,25 +120,28 @@
   <!-- JavaScript Code -->
   <script>
     // Modal functionality for certificates
-    document.querySelectorAll('.cert-card img').forEach(image => {
-      image.addEventListener('click', function() {
-        const modal = document.querySelector('.modal');
-        const modalImg = document.getElementById('img01');
-        modal.style.display = "flex";  // Show modal using flex (center the image)
-        modalImg.src = this.src;
-        
-        // Hide navbar when modal is opened
-        const navbar = document.querySelector('.navbar');
-        navbar.style.top = "-80px";  // Hide navbar
-      });
-    });
+document.querySelectorAll('.cert-card img').forEach(image => {
+  image.addEventListener('click', function() {
+    const modal = document.querySelector('.modal');
+    const modalImg = document.getElementById('img01');
+    const navbar = document.querySelector('.navbar'); // Get the navbar
 
-    // Close modal
-    document.querySelector('.close').addEventListener('click', function() {
-      document.querySelector('.modal').style.display = "none";  // Hide modal
-      const navbar = document.querySelector('.navbar');
-      navbar.style.top = "0";  // Show navbar back
-    });
+    // Show the modal and hide the navbar
+    modal.style.display = "block";
+    navbar.style.top = "-80px"; // Slide navbar out of view
+    modalImg.src = this.src;
+  });
+});
+
+// Close modal and bring the navbar back
+document.querySelector('.close').addEventListener('click', function() {
+  const modal = document.querySelector('.modal');
+  const navbar = document.querySelector('.navbar');
+
+  // Hide the modal and show the navbar
+  modal.style.display = "none";
+  navbar.style.top = "0"; // Slide navbar into view
+});
   </script>
 </body>
 </html>
