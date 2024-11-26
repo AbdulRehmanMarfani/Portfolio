@@ -247,11 +247,13 @@ footer {
     height: 150px;
   }
 
-  .projects-grid, .certifications-grid {
+  .projects-grid,
+  .certifications-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-card, .cert-card {
+  .project-card,
+  .cert-card {
     padding: 1rem;
   }
 
