@@ -72,14 +72,20 @@ section {
   text-align: center;
   padding: 40px 0;
 }
+/* Profile Section */
+.profile {
+  text-align: center;
+  margin-top: 20px;
+}
 
 .profile-pic {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  object-fit: cover; /* Ensures the image doesn't stretch */
-  margin-bottom: 20px;
+  object-fit: cover;  /* Ensures the image is not stretched or distorted */
+  margin-top: 20px;   /* Adds some space from the top */
 }
+
 
 .projects-section,
 .certifications-section {
