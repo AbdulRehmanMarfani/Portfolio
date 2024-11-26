@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header Styling */
+/* Header */
 header {
   background: rgba(0, 0, 0, 0.8);
   padding: 1rem;
@@ -23,205 +23,163 @@ header {
   z-index: 1000;
 }
 
-/* Navigation Bar Styles */
+/* Navbar */
 .navbar {
   position: fixed;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.7); /* Blue-ish glow effect */
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.7);
   z-index: 1000;
-  transition: all 0.5s ease-in-out; /* Smooth appearance */
-  top: -80px; /* Initially hidden */
+  transition: all 0.5s ease-in-out;
+  top: -80px;
 }
 
-/* Navigation Links */
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navbar-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar ul li {
-  margin: 0 15px;
+.navbar-links {
+  display: flex;
+  gap: 20px;
 }
 
-.navbar ul li a {
+.navbar a {
   text-decoration: none;
-  color: #fff;
-  font-weight: bold;
+  color: white;
   font-size: 18px;
+  padding: 10px 15px;
+  display: inline-block;
   transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-  color: #1e90ff;
+.navbar a:hover {
+  color: #00ccff;
 }
 
-/* Section Styling */
-section {
-  padding: 80px 20px;
-  margin: 20px 0;
-}
-
-/* About Section */
-.about-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  padding: 2rem;
-}
-
-/* Profile container */
-.profile {
-  display: flex;
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 600px;
-  text-align: center;
+  gap: 5px;
 }
 
-/* Profile Picture */
+.hamburger span {
+  background-color: white;
+  width: 25px;
+  height: 3px;
+}
+
+/* Profile */
 .profile-pic {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  object-fit: cover;  /* Ensures the image maintains its aspect ratio */
-  object-position: center; /* Ensures the image is centered inside the circle */
+  object-fit: cover;
+  object-position: center;
   margin-bottom: 1rem;
 }
 
-
-
-.projects-section,
-.certifications-section {
-  background: rgba(0, 0, 0, 0.8);
+/* Projects Section */
+.projects-section {
+  padding: 3rem 2rem;
+  background: rgba(0, 31, 63, 0.9);
 }
 
-h2 {
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: rgba(0, 31, 63, 0.8);
+  border: 1px solid #00ccff;
+  padding: 1.5rem;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 204, 255, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin: 10px 0;
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 204, 255, 0.7);
 }
 
-.projects-grid,
+/* Certifications Section */
+.certifications-section {
+  padding: 3rem 2rem;
+}
+
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
 }
 
-.project-card,
-.cert-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease;
+.cert-card img {
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.project-card:hover,
-.cert-card:hover {
+.cert-card img:hover {
   transform: scale(1.05);
 }
 
-.cert-thumbnail {
-  width: 100%;
-  max-width: 200px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: opacity 0.3s ease;
-}
-
-.cert-thumbnail:hover {
-  opacity: 0.8;
-}
-
-/* Contact Section */
-.contact-info {
-  text-align: center;
-}
-
-.contact-info a {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-/* Modal Styles */
-.modal {
-  display: none; /* Initially hidden */
+/* Modal */
+.cert-modal {
+  display: none;
   position: fixed;
-  z-index: 1000;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  z-index: 2000;
 }
 
-/* Modal Content */
-.modal-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1); /* Slight background color to make the image pop */
+.cert-image {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
 }
 
-/* Close Button */
 .close-btn {
   position: absolute;
-  top: -10px; /* Positioned closer to the image */
-  right: 0;
-  font-size: 2rem;
+  top: 20px;
+  right: 20px;
   color: #fff;
+  font-size: 30px;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.7);
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  transition: background 0.3s ease;
+  z-index: 3000;
 }
 
-.close-btn:hover {
-  background: rgba(0, 0, 0, 0.5);
-}
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 20px 0;
+  }
 
-/* Blurring Background Only */
-.modal::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px); /* Only blur the background */
-  z-index: -1;
-}
+  .navbar-links.active {
+    display: flex;
+  }
 
-/* Footer Styling */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-footer p {
-  font-size: 1rem;
-  color: #ccc;
+  .hamburger {
+    display: flex;
+  }
 }
