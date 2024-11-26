@@ -62,147 +62,167 @@ header {
   color: #00ccff;
 }
 
-/* About Section Styling */
+/* About Section */
 .about-section {
-  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
-  color: #fff;
+  padding: 2rem;
 }
 
+/* Profile container */
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Profile Picture */
 .profile-pic {
-  width: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 1rem;
 }
 
-.profile h2 {
-  font-size: 36px;
-  margin: 20px 0;
-}
-
-.profile p {
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-/* Projects Section Styling */
+/* Projects Section */
 .projects-section {
-  background-color: #141414;
-  padding: 40px 0;
+  padding: 5rem 2rem;
   text-align: center;
+  background-color: #111;
 }
 
+.projects-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* Project Cards Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: 2rem;
 }
 
+/* Project Card Styling */
 .project-card {
-  background-color: #333;
-  padding: 20px;
+  background: #1c1c1c;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
 }
 
 .project-card h3 {
-  font-size: 24px;
-  color: #00ccff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .project-card p {
-  font-size: 16px;
-  color: #ddd;
+  font-size: 1rem;
+  color: #aaa;
 }
 
 /* Certifications Section */
 .certifications-section {
-  background-color: #1f2a57;
-  padding: 40px 0;
+  padding: 5rem 2rem;
+  background-color: #1c1c1c;
+  text-align: center;
 }
 
+.certifications-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Certifications Grid */
 .certifications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: 2rem;
 }
 
+/* Certificate Cards */
 .cert-card {
-  position: relative;
-  background-color: #2a2a2a;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
 }
 
 .cert-card img {
   width: 100%;
-  border-bottom: 5px solid #00ccff;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .cert-card h3 {
-  font-size: 22px;
-  text-align: center;
-  color: #fff;
-  margin: 10px 0;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 .cert-card p {
-  font-size: 16px;
-  color: #ccc;
-  text-align: center;
+  font-size: 1rem;
+  color: #aaa;
 }
 
-/* Modal Styles */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .modal-content {
-  max-width: 70%;  /* Limit the max width to 70% of the viewport */
-  max-height: 70%;  /* Limit the max height to 70% of the viewport */
-  object-fit: contain;  /* Maintain the aspect ratio of the image */
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
 
+/* Close Button */
 .close {
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
   position: absolute;
   top: 20px;
   right: 25px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
-
-.close:hover,
-.close:focus {
-  color: #00ccff;
-}
-
 
 /* Contact Section */
 #contact {
-  padding: 40px 20px;
-  background-color: #141414;
-  color: #fff;
+  background-color: #111;
+  color: #d4e4ff;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-.contact-info a {
+#contact a {
   color: #00ccff;
   text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 1rem;
+  color: #d4e4ff;
 }
