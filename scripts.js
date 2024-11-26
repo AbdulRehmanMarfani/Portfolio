@@ -1,4 +1,4 @@
-// JavaScript for Hamburger Menu Toggle
+// Hamburger Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const navbarLinks = document.querySelector('.navbar-links');
 
@@ -6,7 +6,7 @@ hamburger.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
 });
 
-// JavaScript for Modal
+// Certificate Modal Open/Close
 function openModal(imgSrc) {
   const modal = document.getElementById('cert-modal');
   const certImage = document.getElementById('cert-image');
