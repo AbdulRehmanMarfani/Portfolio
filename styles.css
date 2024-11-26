@@ -74,7 +74,7 @@ header {
   height: 3px;
 }
 
-/* Profile */
+/* Profile Section */
 .profile {
   text-align: center;
 }
@@ -86,6 +86,9 @@ header {
   object-fit: cover;
   object-position: center;
   margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Projects Section */
