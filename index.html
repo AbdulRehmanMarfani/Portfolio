@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio</title>
+  <link rel="icon" type="image/png" href="Me.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Header -->
+  <header>
+    <!-- Navigation Panel -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>  
+  </header>
 
   <!-- About Section -->
   <section id="about" class="about-section">
-    <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-    <h2>About Me</h2>
-    <p>Hello, I am a passionate developer with an interest in various technologies. Here are some of my certifications and projects.</p>
+    <div class="container">
+      <div class="profile">
+        <img src="Me.png" class="profile-pic" alt="Profile Picture">
+        <h2>Greetings!</h2>
+        <p>I'm Abdul Rehman Marfani from Karachi, Pakistan. I've completed my O and am in the process of completing A levels and have a strong passion for programming. I've earned certifications from Google, IBM, and Cisco, which have helped me develop my skills and knowledge in the tech field. I'm always eager to learn and grow in this ever-evolving industry. Welcome to my portfolio!</p>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
@@ -31,23 +39,23 @@
     <div class="projects-grid">
       <div class="project-card">
         <h3>Snake Game</h3>
-        <p>A classic game written in Python. Navigate the snake to eat food while avoiding collisions with the walls or its own body.</p>
+        <p>A classic game built using Python and the Turtle library where the player controls a snake that grows as it eats food.</p>
       </div>
       <div class="project-card">
         <h3>Pong Game</h3>
-        <p>A Python-based version of the famous Pong game. Play against a friend or the AI!</p>
+        <p>Recreated the iconic Pong game using Python and the Turtle module with smooth paddle and ball movement mechanics.</p>
       </div>
       <div class="project-card">
         <h3>Turtle Crossing Game</h3>
-        <p>A Python game using the Turtle graphics module where you navigate the turtle across the screen while avoiding obstacles.</p>
+        <p>A fun arcade-style game where a turtle avoids obstacles to cross the road. Built using Python's Turtle graphics module.</p>
       </div>
       <div class="project-card">
         <h3>US States Guessing Game</h3>
-        <p>Guess the correct state from the USA based on the clues provided. A fun and educational game for geography enthusiasts.</p>
+        <p>An educational game to guess US states, using Python and CSV data for accuracy.</p>
       </div>
       <div class="project-card">
-        <h3>Pomodoro Timer</h3>
-        <p>A Pomodoro timer application with a graphical interface. Helps you stay focused by working in intervals with short breaks.</p>
+        <h3>Pomodoro GUI Application</h3>
+        <p>A productivity timer built with Python’s Tkinter library, implementing the Pomodoro technique for efficient time management.</p>
       </div>
     </div>
   </section>
@@ -57,56 +65,80 @@
     <h2>Certifications</h2>
     <div class="certifications-grid">
       <div class="cert-card">
-        <img src="Google-certificate.jpg" alt="Crash Course on Python - Google" class="cert-img" onclick="openModal(this)">
+        <img src="Google-certificate.jpg" alt="Crash Course on Python - Google">
+        <h3>Crash Course on Python</h3>
+        <p>Issued by Google</p>
       </div>
       <div class="cert-card">
-        <img src="Python_Essentials_1.png" alt="Python Essentials 1 - Cisco" class="cert-img" onclick="openModal(this)">
+        <img src="Python_Essentials_1.png" alt="Python Essentials 1 - Cisco">
+        <h3>Python Essentials 1</h3>
+        <p>Issued by Cisco Networking Academy</p>
       </div>
       <div class="cert-card">
-        <img src="Python_Essentials_2.png" alt="Python Essentials 2 - Cisco" class="cert-img" onclick="openModal(this)">
+        <img src="Python_Essentials_2.png" alt="Python Essentials 2 - Cisco">
+        <h3>Python Essentials 2</h3>
+        <p>Issued by Cisco Networking Academy</p>
       </div>
       <div class="cert-card">
-        <img src="IBM-certificate.png" alt="Python for Data Science - IBM" class="cert-img" onclick="openModal(this)">
+        <img src="IBM-certificate.png" alt="Python for Data Science - IBM">
+        <h3>Python for Data Science, AI, and Development</h3>
+        <p>Issued by IBM</p>
       </div>
       <div class="cert-card">
-        <img src="Data-flair.jpg" alt="Introduction to Python - Data Flair" class="cert-img" onclick="openModal(this)">
+        <img src="Data-flair.jpg" alt="Introduction to Python - Data Flair">
+        <h3>Introduction to Python</h3>
+        <p>Issued by Data Flair</p>
       </div>
       <div class="cert-card">
-        <img src="kaggle-certificate.png" alt="Python - Kaggle" class="cert-img" onclick="openModal(this)">
+        <img src="kaggle-certificate.png" alt="Python - Kaggle">
+        <h3>Python</h3>
+        <p>Issued by Kaggle</p>
       </div>
     </div>
   </section>
 
-  <!-- Modal for Certificates -->
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, you can reach out via email:</p>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:abdulrehmanmarfani84@gmail.com">abdulrehmanmarfani84@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal for Certificate Image -->
   <div class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="close">&times;</span>
     <img class="modal-content" id="img01">
   </div>
 
-  <!-- JavaScript for Modal Functionality -->
+  <!-- JavaScript Code -->
   <script>
-    // Function to open the modal and display the clicked image
-    function openModal(imgElement) {
-      var modal = document.querySelector('.modal');
-      var modalImg = document.getElementById('img01');
-      modal.style.display = "block";
-      modalImg.src = imgElement.src;
-    }
+    // Modal functionality for certificates
+    document.querySelectorAll('.cert-card img').forEach(image => {
+      image.addEventListener('click', function() {
+        const modal = document.querySelector('.modal');
+        const modalImg = document.getElementById('img01');
+        modal.style.display = "flex";  // Show modal using flex (center the image)
+        modalImg.src = this.src;
+        
+        // Hide navbar when modal is opened
+        const navbar = document.querySelector('.navbar');
+        navbar.style.top = "-80px";  // Hide navbar
+      });
+    });
 
-    // Function to close the modal
-    function closeModal() {
-      var modal = document.querySelector('.modal');
-      modal.style.display = "none";
-    }
-
-    // Ensure that the modal closes if clicked outside the image
-    window.onclick = function(event) {
-      var modal = document.querySelector('.modal');
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+    // Close modal
+    document.querySelector('.close').addEventListener('click', function() {
+      document.querySelector('.modal').style.display = "none";  // Hide modal
+      const navbar = document.querySelector('.navbar');
+      navbar.style.top = "0";  // Show navbar back
+    });
   </script>
-
 </body>
 </html>
