@@ -243,6 +243,28 @@ footer {
   .navbar li {
     margin: 10px 0;
   }
+/* Floating effect on project and cert cards */
+.project-card:hover,
+.cert-card:hover {
+  transform: translateY(-10px);  /* Slightly lift the card */
+  box-shadow: 0 8px 15px rgba(0, 204, 255, 0.7);  /* Enhanced shadow for floating effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile view adjustments for the modal */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    display: block;
+    max-width: 90%;  /* Make the image a bit smaller on mobile */
+    margin: 5% auto;
+  }
+
+  .close {
+    top: 10px; /* Adjust close button position for mobile */
+    right: 10px;
+    font-size: 25px;
+  }
+}
 
   .navbar a {
     font-size: 16px;
