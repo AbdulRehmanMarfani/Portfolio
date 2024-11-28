@@ -51,132 +51,97 @@ header {
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: #00ccff;
   font-size: 18px;
-  padding: 10px 15px;
-  display: inline-block;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  padding: 5px 15px;
 }
 
 .navbar a:hover {
-  color: #00ccff;
+  color: #ffffff;
 }
 
-/* About Section */
+/* Section Styling */
+section {
+  padding: 60px 0;
+}
+
+/* About Section Styling */
 .about-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  padding: 2rem;
-}
-
-/* Profile container */
-.profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 600px;
+  background: #2c3e50;
+  color: #ecf0f1;
   text-align: center;
 }
 
-/* Profile Picture */
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  margin-bottom: 1rem;
 }
 
-/* Projects Section */
+/* Projects Section Styling */
 .projects-section {
-  padding: 5rem 2rem;
+  background: #34495e;
   text-align: center;
-  background-color: #111;
 }
 
-.projects-section h2 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-}
-
-/* Project Cards Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 20px;
 }
 
-/* Project Card Styling */
 .project-card {
-  background: #1c1c1c;
+  background-color: #2c3e50;
+  padding: 15px;
   border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(0, 204, 255, 0.7);
+.project-card h3 {
+  color: #00ccff;
 }
 
-/* Certifications Section */
+.project-card p {
+  font-size: 16px;
+}
+
+/* Certifications Section Styling */
 .certifications-section {
-  padding: 5rem 2rem;
-  background-color: #1c1c1c;
+  background: #1f2a57;
   text-align: center;
 }
 
-.certifications-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-/* Certifications Grid */
 .certifications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 20px;
 }
 
-/* Certificate Cards */
 .cert-card {
-  background: #1c1c1c;
+  background-color: #34495e;
+  padding: 20px;
   border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .cert-card img {
   width: 100%;
   height: auto;
-  object-fit: contain;
   border-radius: 8px;
 }
 
-.cert-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 15px rgba(0, 204, 255, 0.7);
-}
-
 .cert-card h3 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  color: #00ccff;
+  margin-top: 10px;
 }
 
 .cert-card p {
-  font-size: 1rem;
-  color: #aaa;
+  font-size: 14px;
+  color: #95a5a6;
 }
 
-/* Modal */
+/* Modal Styling */
 .modal {
   display: none;
   position: fixed;
@@ -188,7 +153,7 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
-  align-items: center; /* Center the modal content */
+  align-items: center;
 }
 
 .modal-content {
@@ -197,7 +162,6 @@ header {
   margin: 0;
   display: block;
   object-fit: contain;
-  object-position: center;
 }
 
 .close {
@@ -205,10 +169,11 @@ header {
   font-size: 30px;
   font-weight: bold;
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 10px;
+  right: 20px;
   cursor: pointer;
   transition: color 0.3s ease;
+  z-index: 100;
 }
 
 .close:hover,
@@ -216,51 +181,16 @@ header {
   color: #00ccff;
 }
 
-/* Contact Section */
-#contact {
-  background-color: #111;
-  color: #d4e4ff;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-#contact a {
-  color: #00ccff;
-  text-decoration: none;
-}
-
-/* Footer */
-footer {
-  background-color: #111;
-  text-align: center;
-  padding: 1rem;
-  color: #d4e4ff;
-}
-
 /* Mobile-Friendly Adjustments */
 @media screen and (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar li {
-    margin: 10px 0;
-  }
-
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 1rem;
-  }
-
   .modal-content {
     max-width: 85%;
     max-height: 70%;
+    object-position: center;
   }
 
   .close {
-    top: 10px;
+    top: 5px;
     right: 10px;
   }
 }
