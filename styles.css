@@ -11,50 +11,34 @@ body {
   color: #d4e4ff;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll issues */
 }
 
-/* Header Styling */
-header {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Navigation Bar Styles */
+/* Navbar Styling */
 .navbar {
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  box-shadow: none; /* Remove shadow */
-  border: none; /* Remove any border */
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+  padding: 10px 0;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hiding/showing */
   z-index: 1000;
-  transition: all 0.5s ease-in-out; /* Smooth appearance */
-  top: -80px; /* Initially hidden */
-}
-
-/* Ensure no pseudo-elements cause issues */
-.navbar::before,
-.navbar::after {
-  content: '';
-  display: none; /* Hide pseudo-elements if present */
+  border: none; /* Ensure no border */
+  box-shadow: none; /* Remove shadow */
 }
 
 /* Navigation Links */
 .navbar ul {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-around;
 }
 
 .navbar li {
-  display: inline;
+  margin: 0 15px;
 }
 
 .navbar a {
@@ -62,7 +46,6 @@ header {
   color: white;
   font-size: 18px;
   padding: 10px 15px;
-  display: inline-block;
   transition: color 0.3s ease;
 }
 
@@ -72,186 +55,57 @@ header {
 
 /* About Section */
 .about-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
   padding: 2rem;
-}
-
-/* Profile container */
-.profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 600px;
   text-align: center;
 }
 
-/* Profile Picture */
-.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-  margin-bottom: 1rem;
-}
-
-/* Projects Section */
-.projects-section {
-  padding: 5rem 2rem;
-  text-align: center;
-  background-color: #111;
-}
-
-.projects-section h2 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-}
-
-/* Project Cards Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-/* Project Card Styling */
-.project-card {
-  background: #1c1c1c;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px); /* Floating effect */
-  box-shadow: 0 8px 15px rgba(0, 204, 255, 0.7); /* Enhanced shadow */
-}
-
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.project-card p {
-  font-size: 1rem;
-  color: #aaa;
-}
-
-/* Certifications Section */
-.certifications-section {
-  padding: 5rem 2rem;
-  background-color: #1c1c1c;
-  text-align: center;
-}
-
-.certifications-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-/* Certifications Grid */
-.certifications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-/* Certificate Cards */
-.cert-card {
-  background: #1c1c1c;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cert-card:hover {
-  transform: translateY(-10px); /* Floating effect */
-  box-shadow: 0 8px 15px rgba(0, 204, 255, 0.7); /* Enhanced shadow */
-}
-
-.cert-card img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.cert-card h3 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-.cert-card p {
-  font-size: 1rem;
-  color: #aaa;
-}
-
-/* Modal */
-/* Modal Styles for certificate images */
+/* Modal Styles */
 .modal {
-  display: none; /* This hides the modal initially */
+  display: none;
   position: fixed;
-  z-index: 200; /* Ensure modal is above all other elements */
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background for modal */
+  z-index: 2000; /* Above navbar */
 }
 
 .modal-content {
+  display: block;
   max-width: 80%;
   max-height: 80%;
   margin: 5% auto;
-  display: block;
 }
 
 .close {
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.close:hover,
-.close:focus {
+.close:hover {
   color: #00ccff;
 }
 
-/* Contact Section */
-#contact {
-  background-color: #111;
-  color: #d4e4ff;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-#contact a {
-  color: #00ccff;
-  text-decoration: none;
+/* Fix Modal Close Button Overlap */
+.modal .close {
+  z-index: 2001; /* Above modal content */
 }
 
 /* Footer */
 footer {
-  background-color: #111;
   text-align: center;
   padding: 1rem;
+  background: #111;
   color: #d4e4ff;
 }
 
-/* Mobile Friendly Navbar */
+/* Mobile Styling */
 @media screen and (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -260,30 +114,5 @@ footer {
 
   .navbar li {
     margin: 10px 0;
-  }
-
-  /* Profile picture resizing for mobile */
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 1rem;
-  }
-}
-
-/* Mobile view adjustments for the modal */
-@media screen and (max-width: 768px) {
-  /* Center the modal content (certificate image) */
-  .modal-content {
-    max-width: 80%; /* Ensure the image size is optimal */
-    max-height: 80%;
-    margin: 5% auto; /* Center horizontally and add margin at the top */
-  }
-
-  /* Center the modal close button */
-  .close {
-    top: 10px; /* Position the close button above the image */
-    right: 10px;
-    font-size: 30px; /* Adjust size for mobile */
-    color: white;
   }
 }
