@@ -23,19 +23,26 @@ header {
   z-index: 1000;
 }
 
-/* Navigation Bar Styles */
 .navbar {
   position: fixed;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.7);
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.7); /* Blue-ish glow effect */
   z-index: 1000;
-  transition: all 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Add smooth hiding */
   top: -80px; /* Initially hidden */
+  opacity: 0; /* Ensure it’s not visible */
+  visibility: hidden; /* Prevent the black line when hidden */
 }
 
+/* When navbar is visible */
+.navbar.show {
+  top: 0;
+  opacity: 1;
+  visibility: visible; /* Navbar is fully visible */
+}
 /* Navigation Links */
 .navbar ul {
   list-style-type: none;
