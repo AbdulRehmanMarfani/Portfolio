@@ -11,34 +11,42 @@ body {
   color: #d4e4ff;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  overflow-x: hidden; /* Prevent horizontal scroll issues */
 }
 
-/* Navbar Styling */
+/* Header Styling */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navigation Bar Styles */
 .navbar {
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
-  padding: 10px 0;
-  transition: transform 0.3s ease-in-out; /* Smooth transition for hiding/showing */
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.7);
   z-index: 1000;
-  border: none; /* Ensure no border */
-  box-shadow: none; /* Remove shadow */
+  transition: all 0.5s ease-in-out;
+  top: -80px; /* Initially hidden */
 }
 
 /* Navigation Links */
 .navbar ul {
   list-style-type: none;
-  display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar li {
-  margin: 0 15px;
+  display: inline;
 }
 
 .navbar a {
@@ -46,6 +54,7 @@ body {
   color: white;
   font-size: 18px;
   padding: 10px 15px;
+  display: inline-block;
   transition: color 0.3s ease;
 }
 
@@ -55,57 +64,175 @@ body {
 
 /* About Section */
 .about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
   padding: 2rem;
+}
+
+/* Profile container */
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
   text-align: center;
 }
 
-/* Modal Styles */
+/* Profile Picture */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 1rem;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: #111;
+}
+
+.projects-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* Project Cards Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Project Card Styling */
+.project-card {
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 204, 255, 0.7);
+}
+
+/* Certifications Section */
+.certifications-section {
+  padding: 5rem 2rem;
+  background-color: #1c1c1c;
+  text-align: center;
+}
+
+.certifications-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Certificate Cards */
+.cert-card {
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 204, 255, 0.7);
+}
+
+.cert-card h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cert-card p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
-  top: 0;
+  z-index: 1;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Dark background for modal */
-  z-index: 2000; /* Above navbar */
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
-  display: block;
-  max-width: 80%;
+  max-width: 90%;
   max-height: 80%;
   margin: 5% auto;
+  display: block;
 }
 
 .close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 30px;
   color: white;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 25px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-.close:hover {
+.close:hover,
+.close:focus {
   color: #00ccff;
 }
 
-/* Fix Modal Close Button Overlap */
-.modal .close {
-  z-index: 2001; /* Above modal content */
+/* Contact Section */
+#contact {
+  background-color: #111;
+  color: #d4e4ff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#contact a {
+  color: #00ccff;
+  text-decoration: none;
 }
 
 /* Footer */
 footer {
+  background-color: #111;
   text-align: center;
   padding: 1rem;
-  background: #111;
   color: #d4e4ff;
 }
 
-/* Mobile Styling */
+/* Mobile-Friendly Adjustments */
 @media screen and (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
@@ -114,5 +241,21 @@ footer {
 
   .navbar li {
     margin: 10px 0;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content {
+    max-width: 85%;
+    max-height: 70%;
+  }
+
+  .close {
+    top: 10px;
+    right: 10px;
   }
 }
