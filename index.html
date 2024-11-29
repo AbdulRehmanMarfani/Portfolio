@@ -119,7 +119,7 @@
 
   <!-- JavaScript Code -->
  <script>
-  // Modal functionality for certificates
+// Modal functionality for certificates
 document.querySelectorAll('.cert-card img').forEach(image => {
   image.addEventListener('click', function() {
     const modal = document.querySelector('.modal');
@@ -127,8 +127,7 @@ document.querySelectorAll('.cert-card img').forEach(image => {
     const navbar = document.querySelector('.navbar');
 
     // Hide the navbar when an image is clicked
-    navbar.style.top = "-80px"; // Hide the navbar
-    navbar.style.opacity = "0"; // Fade out the navbar
+    navbar.classList.remove('show'); // Ensure navbar is hidden when modal is open
 
     // Show the modal
     modal.style.display = "block";
@@ -145,8 +144,7 @@ document.querySelector('.close').addEventListener('click', function() {
   modal.style.display = "none";
   
   // Show the navbar again when the modal is closed
-  navbar.style.top = "0"; // Show the navbar
-  navbar.style.opacity = "1"; // Fade in the navbar
+  navbar.classList.add('show'); // Ensure navbar reappears when modal is closed
 });
 
 // Navbar visibility based on scroll
@@ -158,11 +156,9 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
-          navbar.style.top = "0"; // Show navbar when About section is not visible
-          navbar.style.opacity = "1"; // Fade-in effect
+          navbar.classList.add("show"); // Show navbar when About section is not visible
         } else {
-          navbar.style.top = "-80px"; // Hide navbar when About section is visible
-          navbar.style.opacity = "0"; // Fade-out effect
+          navbar.classList.remove("show"); // Hide navbar when About section is visible
         }
       });
     },
