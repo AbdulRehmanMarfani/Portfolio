@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #1e1e1e; /* Dark background */
+  color: #f0f0f0; /* Light text color */
   font-size: 16px;
 }
 
@@ -55,11 +55,16 @@ header {
   font-size: 16px;
 }
 
+/* Hamburger Menu - Left Position */
 .hamburger {
-  display: none;
+  display: flex;
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
+  position: fixed; /* Fixed position at the top */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left edge */
+  z-index: 9999; /* Ensure it's above other content */
 }
 
 .hamburger span {
@@ -68,9 +73,40 @@ header {
   background-color: white;
 }
 
+/* Navigation Menu */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  position: fixed; /* Fixed position */
+  top: 60px; /* Starts below the hamburger icon */
+  left: 0; /* Align to the left */
+  background-color: #333; /* Dark background */
+  width: 50%; /* Menu takes half the screen width */
+  height: 100vh; /* Full-screen height */
+  transform: translateX(-100%); /* Initially hidden off-screen */
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.navbar ul.active {
+  transform: translateX(0); /* Show the menu */
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 15px 0;
+}
+
 /* About Section */
 .about-section {
-  background-color: #fff;
+  background-color: #1e1e1e; /* Dark background */
   padding: 50px 0;
 }
 
@@ -108,7 +144,7 @@ header {
 
 /* Projects Section */
 .projects-section {
-  background-color: #f9f9f9;
+  background-color: #1e1e1e; /* Dark background */
   padding: 50px 0;
 }
 
@@ -116,6 +152,7 @@ header {
   text-align: center;
   font-size: 36px;
   margin-bottom: 20px;
+  color: #f0f0f0; /* Light text */
 }
 
 .projects-grid {
@@ -126,25 +163,34 @@ header {
 }
 
 .project-card {
-  background-color: #fff;
+  background-color: #333; /* Dark background */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Adding float animation to project cards */
+.project-card:hover {
+  transform: translateY(-10px); /* Float up effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .project-card h3 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #f0f0f0; /* Light text */
 }
 
 .project-card p {
   font-size: 16px;
+  color: #ccc; /* Lighter text */
 }
 
 /* Certifications Section */
 .certifications-section {
-  background-color: #fff;
+  background-color: #333; /* Dark background */
   padding: 50px 0;
 }
 
@@ -152,6 +198,7 @@ header {
   text-align: center;
   font-size: 36px;
   margin-bottom: 20px;
+  color: #f0f0f0; /* Light text */
 }
 
 .certifications-grid {
@@ -162,11 +209,18 @@ header {
 }
 
 .cert-card {
-  background-color: #fff;
+  background-color: #444; /* Dark background */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Adding float animation to certification cards */
+.cert-card:hover {
+  transform: translateY(-10px); /* Float up effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .cert-card img {
@@ -179,26 +233,29 @@ header {
 .cert-card h3 {
   font-size: 24px;
   margin-bottom: 5px;
+  color: #f0f0f0; /* Light text */
 }
 
 .cert-card p {
   font-size: 16px;
+  color: #ccc; /* Lighter text */
 }
 
 /* Contact Section */
 #contact {
-  background-color: #f9f9f9;
+  background-color: #1e1e1e; /* Dark background */
   padding: 50px 0;
   text-align: center;
 }
 
 .contact-info p {
   font-size: 18px;
+  color: #f0f0f0; /* Light text */
 }
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #333; /* Dark background */
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -242,18 +299,27 @@ footer {
   .navbar ul {
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 60px;
+    left: 0; /* Align to the left */
     background-color: #333;
-    width: 100%;
+    width: 50%; /* Menu takes half the screen width */
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
   }
 
   .navbar ul.active {
+    transform: translateX(0);
     display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 20px;
   }
 
   .hamburger {
     display: flex;
+    left: 20px; /* Position it to the left */
   }
 
   .about-section .container {
