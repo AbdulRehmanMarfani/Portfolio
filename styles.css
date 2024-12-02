@@ -10,6 +10,7 @@ body {
   background-color: #1e1e1e; /* Dark background */
   color: #f0f0f0; /* Light text color */
   font-size: 16px;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
@@ -28,6 +29,11 @@ header {
   padding: 10px;
   background-color: #333;
   color: white;
+  transition: background-color 0.3s ease;
+}
+
+header:hover {
+  background-color: #444; /* Darker shade on hover */
 }
 
 .navbar {
@@ -40,12 +46,14 @@ header {
 .navbar h1 {
   font-size: 24px;
   font-weight: bold;
+  color: #fff;
 }
 
 .navbar ul {
   list-style-type: none;
   display: flex;
   gap: 20px;
+  transition: transform 0.3s ease;
 }
 
 .navbar ul li a {
@@ -53,6 +61,23 @@ header {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 16px;
+  position: relative;
+}
+
+.navbar ul li a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f0f0f0;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover:after {
+  width: 100%;
 }
 
 /* Hamburger Menu - Left Position */
@@ -71,6 +96,7 @@ header {
   width: 30px;
   height: 3px;
   background-color: white;
+  border-radius: 5px;
 }
 
 /* Navigation Menu */
@@ -102,12 +128,18 @@ header {
   text-transform: uppercase;
   font-size: 16px;
   padding: 15px 0;
+  position: relative;
 }
 
 /* About Section */
 .about-section {
-  background-color: #1e1e1e; /* Dark background */
+  background-color: #1e1e1e;
   padding: 50px 0;
+  transition: background-color 0.3s ease;
+}
+
+.about-section:hover {
+  background-color: #222; /* Slightly lighter */
 }
 
 .about-section .container {
@@ -123,6 +155,11 @@ header {
 .profile {
   width: 80%;
   max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-10px); /* Slight float effect */
 }
 
 .profile img {
@@ -130,6 +167,11 @@ header {
   height: 150px;
   border-radius: 50%;
   margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.1); /* Image zoom effect */
 }
 
 .profile h2 {
@@ -139,20 +181,25 @@ header {
 
 .profile p {
   font-size: 18px;
-  line-height: 1.6;
+  color: #ccc;
 }
 
 /* Projects Section */
 .projects-section {
-  background-color: #1e1e1e; /* Dark background */
+  background-color: #1e1e1e;
   padding: 50px 0;
+  transition: background-color 0.3s ease;
+}
+
+.projects-section:hover {
+  background-color: #222; /* Slightly lighter */
 }
 
 .projects-section h2 {
   text-align: center;
   font-size: 36px;
   margin-bottom: 20px;
-  color: #f0f0f0; /* Light text */
+  color: #f0f0f0;
 }
 
 .projects-grid {
@@ -163,7 +210,7 @@ header {
 }
 
 .project-card {
-  background-color: #333; /* Dark background */
+  background-color: #333;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -171,34 +218,38 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Adding float animation to project cards */
 .project-card:hover {
-  transform: translateY(-10px); /* Float up effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #f0f0f0; /* Light text */
+  color: #f0f0f0;
 }
 
 .project-card p {
   font-size: 16px;
-  color: #ccc; /* Lighter text */
+  color: #ccc;
 }
 
 /* Certifications Section */
 .certifications-section {
-  background-color: #333; /* Dark background */
+  background-color: #333;
   padding: 50px 0;
+  transition: background-color 0.3s ease;
+}
+
+.certifications-section:hover {
+  background-color: #444; /* Slightly lighter */
 }
 
 .certifications-section h2 {
   text-align: center;
   font-size: 36px;
   margin-bottom: 20px;
-  color: #f0f0f0; /* Light text */
+  color: #f0f0f0;
 }
 
 .certifications-grid {
@@ -209,7 +260,7 @@ header {
 }
 
 .cert-card {
-  background-color: #444; /* Dark background */
+  background-color: #444;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -217,10 +268,9 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Adding float animation to certification cards */
 .cert-card:hover {
-  transform: translateY(-10px); /* Float up effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .cert-card img {
@@ -233,29 +283,29 @@ header {
 .cert-card h3 {
   font-size: 24px;
   margin-bottom: 5px;
-  color: #f0f0f0; /* Light text */
+  color: #f0f0f0;
 }
 
 .cert-card p {
   font-size: 16px;
-  color: #ccc; /* Lighter text */
+  color: #ccc;
 }
 
 /* Contact Section */
 #contact {
-  background-color: #1e1e1e; /* Dark background */
+  background-color: #1e1e1e;
   padding: 50px 0;
   text-align: center;
 }
 
 .contact-info p {
   font-size: 18px;
-  color: #f0f0f0; /* Light text */
+  color: #f0f0f0;
 }
 
 /* Footer */
 footer {
-  background-color: #333; /* Dark background */
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -301,9 +351,9 @@ footer {
     flex-direction: column;
     position: fixed;
     top: 60px;
-    left: 0; /* Align to the left */
+    left: 0;
     background-color: #333;
-    width: 50%; /* Menu takes half the screen width */
+    width: 50%;
     height: 100vh;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
@@ -311,18 +361,9 @@ footer {
 
   .navbar ul.active {
     transform: translateX(0);
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    padding-left: 20px;
   }
 
   .hamburger {
     display: flex;
-    left: 20px; /* Position it to the left */
-  }
-
-  .about-section .container {
-    flex-direction: column;
   }
 }
