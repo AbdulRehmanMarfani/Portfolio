@@ -14,15 +14,15 @@
     <!-- Navigation Panel -->
     <nav class="navbar">
       <div class="hamburger" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
       <ul id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+        <li><a href="#certifications" onclick="closeMenu()">Certifications</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
       </ul>
     </nav>  
   </header>
@@ -124,63 +124,41 @@
 
   <!-- JavaScript Code -->
   <script>
+    // Toggle the hamburger menu
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    // Close the menu after selecting an option
+    function closeMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.remove('active');
+    }
+
     // Modal functionality for certificates
     document.querySelectorAll('.cert-card img').forEach(image => {
       image.addEventListener('click', function() {
         const modal = document.querySelector('.modal');
         const modalImg = document.getElementById('img01');
-        const navbar = document.querySelector('.navbar');
-        
-        // Hide the navbar when an image is clicked
-        navbar.classList.remove('show');
-        
+
         // Show the modal
-        modal.style.display = "block";
-        modalImg.src = this.src;
+        modal.style.display = "flex"; // Show the modal (only when image is clicked)
+        modalImg.src = this.src; // Set the source of the modal image to the clicked image
       });
     });
 
     // Close modal functionality
     document.querySelector('.close').addEventListener('click', function() {
       const modal = document.querySelector('.modal');
-      const navbar = document.querySelector('.navbar');
-
-      // Hide the modal when the close button is clicked
-      modal.style.display = "none";
-      
-      // Show the navbar again when the modal is closed
-      navbar.classList.add('show');
+      modal.style.display = "none"; // Hide the modal when the close button is clicked
     });
 
-    // Toggle navbar on mobile (hamburger menu)
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('active');
-    }
-
-    // Navbar visibility based on scroll
-    document.addEventListener("DOMContentLoaded", () => {
-      const navbar = document.querySelector(".navbar");
-      const aboutSection = document.querySelector("#about");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) {
-              navbar.classList.add("show");
-            } else {
-              navbar.classList.remove("show");
-            }
-          });
-        },
-        {
-          root: null,
-          threshold: 0.5,
-        }
-      );
-
-      observer.observe(aboutSection);
-    });
+    // Ensure modal background and cross are hidden initially
+    window.onload = function() {
+      const modal = document.querySelector('.modal');
+      modal.style.display = "none"; // Ensure modal is hidden on page load
+    };
   </script>
 </body>
 </html>
