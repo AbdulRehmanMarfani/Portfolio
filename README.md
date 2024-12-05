@@ -78,11 +78,11 @@ You can use this portfolio as:
 ## **Screenshots**
 
 ### **Desktop View**
-(![image](https://github.com/user-attachments/assets/7ef7721d-e33b-46b9-a6cd-f7b32d96a2a5), ![image](https://github.com/user-attachments/assets/a2a0221d-c6c1-42d1-bbb1-1403d7e62951), ![image](https://github.com/user-attachments/assets/ddce2679-5006-48d4-b9af-0f0847fe6fb3)
+![image](https://github.com/user-attachments/assets/7ef7721d-e33b-46b9-a6cd-f7b32d96a2a5) ![image](https://github.com/user-attachments/assets/a2a0221d-c6c1-42d1-bbb1-1403d7e62951) ![image](https://github.com/user-attachments/assets/ddce2679-5006-48d4-b9af-0f0847fe6fb3)
  
 
 ### **Mobile View**
-(![image](https://github.com/user-attachments/assets/3d739f42-9f42-4ff1-adaf-04ca1ece1454), ![image](https://github.com/user-attachments/assets/ece9ef11-0c52-4ac4-a10a-268a71b5a962), ![image](https://github.com/user-attachments/assets/be4ba885-1900-44ce-92d3-b47769d34e30)
+![image](https://github.com/user-attachments/assets/3d739f42-9f42-4ff1-adaf-04ca1ece1454) ![image](https://github.com/user-attachments/assets/ece9ef11-0c52-4ac4-a10a-268a71b5a962) ![image](https://github.com/user-attachments/assets/be4ba885-1900-44ce-92d3-b47769d34e30)
 
 ---
 
